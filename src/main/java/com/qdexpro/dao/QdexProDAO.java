@@ -10,7 +10,6 @@ public class QdexProDAO {
 
 	private static final String INSERT_DATA="INSERT INTO EMP VALUES(?,?,?);";
 	
-    @Autowired
     private JdbcTemplate jdbcTemplate;
 
 	public void insertData(String id, String name, String age) {

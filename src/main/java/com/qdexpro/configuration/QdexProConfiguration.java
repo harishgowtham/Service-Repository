@@ -21,9 +21,4 @@ public class QdexProConfiguration {
     public QdexProDAO getQdexProDAO() {
         return new QdexProDAO();
     }
- 
-	@Bean
-    public JdbcTemplate getJdbcTemplate() {
-        return new JdbcTemplate();
-    }
 }
