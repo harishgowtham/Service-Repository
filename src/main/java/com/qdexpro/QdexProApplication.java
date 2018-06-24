@@ -9,7 +9,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
 @SpringBootApplication(scanBasePackages = {"com.qdexpro"})
-
 public class QdexProApplication  {
 	private static final Logger LOGGER = LoggerFactory.getLogger(QdexProApplication.class);
 
