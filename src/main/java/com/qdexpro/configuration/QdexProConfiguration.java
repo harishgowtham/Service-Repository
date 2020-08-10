@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.qdexpro.dao.QdexProDAO;
+import com.qdexpro.service.IndexSearchService;
 import com.qdexpro.service.QdexProService;
 
 @Configuration
@@ -38,4 +39,21 @@ public class QdexProConfiguration {
              return new JdbcTemplate(primaryDataSource());
      }
 
+     /*@Bean
+     public ConfigurableServletWebServerFactory webServerFactory() {
+         TomcatServletWebServerFactory factory = new TomcatServletWebServerFactory();
+         factory.addConnectorCustomizers(new TomcatConnectorCustomizer() {
+             @Override
+             public void customize(Connector connector) {
+                 connector.setProperty("relaxedQueryChars", "|{}[]");
+             }
+         });
+         return factory;
+     }
+*/
+     @Bean
+     public IndexSearchService getIndexSearchService() {
+         return new IndexSearchService();
+     }
+     
 }
